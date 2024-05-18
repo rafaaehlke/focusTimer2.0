@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FocusTimer 2.0</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="/assets/ico.svg" type="image/x-svg" />
+    <script type="module" src="./main.js" defer></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <div id="app">
+      
+      <button id="dark-mode">
+        <span class="Sr-Only">Ativar / Desativar dark Mode</span>
+        <i class="ph ph-sun-dim"></i>
+        <i class="ph ph-moon-stars"></i>
+      </button>
+
+      <!-- contador -->
+        <section id="timer">
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </section>
+
+        <!-- controles -->
+        <section id="controls" class="flex">
+          <button id="toggleRunning" class="ph ph-play-circle">
+            <span class="sr-only">Ligar Timer</span>
+          </button>
+
+          <button id="toggleRunning" class="ph ph-pause-circle secondary">
+            <span class="sr-only">Pausar timer</span>
+          </button>
+
+          <button id="timerUp" class="ph ph-plus-circle">
+            <span class="sr-only">Aumentar 5 minutos do timer</span>
+          </button>
+
+          <button id="timerDown" class="ph ph-minus-circle">
+            <span class="sr-only">Diminuir 5 minutos do timer</span>
+          </button>
+        </section>
+      
+      <!-- cards -->
+      <div class="container">
+        <button id="tree" class="ph ph-tree">
+          <span class="sr-only">Adicionar sons da natureza</span>
+        </button>
+
+        <button id="rain" class="ph ph-cloud-rain">
+          <span class="sr-only">Adicionar sons de chuva</span>
+        </button>
+
+        <button id="store" class="ph ph-keyboard">
+          <span class="sr-only">adicionar barulho de teclado</span>
+        </button>
+
+        <button id="fire" class="ph ph-fire">
+          <span class="sr-only">adicionar barulho de lareira</span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
