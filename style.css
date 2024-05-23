@@ -20,6 +20,37 @@
   --bg-card: rgb(208, 208, 209);
 }
 
+/* darkMode */
+html.dark {
+  --bg-dark: linear-gradient(
+    141deg,
+    rgba(92, 139, 208, 1) 0%,
+    rgba(5, 51, 139, 1) 100%
+  );
+  --bg-linear: linear-gradient(
+    141deg,
+    rgba(53, 64, 80, 1) 0%,
+    rgba(9, 30, 70, 1) 100%
+  );
+}
+
+html.dark .ph-moon-stars,
+html:not(.dark) .ph-sun-dim  {
+  display: none;
+}
+
+#dark-mode {
+  position: absolute;
+  right: 3.2rem;
+	top: 3.2rem;
+  font-size: 4.2rem;
+  line-height: 0;
+
+  opacity: 0.8;
+  background-color: transparent;
+  border: none;
+}
+
 /* Acessibilidade */
 .sr-only {
   position: absolute;
@@ -35,65 +66,71 @@
 
 body {
   font-family: "Roboto", sans-serif;
-}
-
-body {
+ 
   display: grid;
   place-content: center;
   height: 100vh;
+  place-content: center;
+
   background: var(--bg-linear);
 }
 
-#app {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
+#app { 
+  max-width: 128rem;
+  gap: 19.2rem;
+  align-items: center;
+  margin-top: -12rem;
 }
 
-/* voltar depois */
-#dark-mode {
-  display: none;
+.flex {
+  display: flex;
 }
-
-#timer,
-#controls {
-  grid-column: 1/2;
-  place-content: center;
-}
-
 
 #timer {
+  display: flex;
+  justify-content: center;
+  
   font-size: 12.6rem;
-  text-align: center;
-  font-weight: 500;
-  text-transform: uppercase;
+  /* grid-area: timer; */
 }
 
-.container {
- display: grid;
- grid-template-columns: repeat(2, 1fr);
- gap: 3.2rem;
+/* Controles e cards */
+#controls {
+  margin-top: 1.6rem;
+  padding: 1.2rem 2rem;
+  gap: 4rem;
+  /* grid-area: controls; */
 }
 
-#tree,
-#rain,
-#store,
-#fire {
-  width: 13.8rem;
-  height: 15.2rem;
-  background: var(--bg-card);
-  opacity: 0.8;
-
-  border-radius: 2.4rem;
+#controls button {
+  font-size: 4.8rem;
+  background-color: transparent;
+  border: none;
 }
 
+#sounds {
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 
   
-button {
+  /* grid-area: sounds; */
+}
+
+
+#sounds button {
+  width: 13.8rem;
+  height: 15.2rem;
   font-size: 4.8rem;
-
+  background-color: var(--bg-card);
+  opacity: 0.7;
+  
   border: none;
-  background-color: transparent;
+  border-radius: 2.4rem;
 
+}
+
+button {
   cursor: pointer;
 }
