@@ -35,38 +35,54 @@
       
         <!-- controles -->
         <section id="controls" class="flex">
-          <button id="toggleRunning" class="ph ph-play-circle">
+          <button  
+          data-action="togglRunning"
+          class="ph ph-play-circle">
             <span class="sr-only">Ligar Timer</span>
           </button>
 
-          <button id="toggleRunning" class="ph ph-pause-circle secondary">
+          <button 
+          data-action="stop"
+          class="ph ph-pause-circle secondary">
             <span class="sr-only">Pausar timer</span>
           </button>
 
-          <button id="timerUp" class="ph ph-plus-circle">
+          <button  
+          data-action="set"
+          class="ph ph-plus-circle">
             <span class="sr-only">Aumentar 5 minutos do timer</span>
           </button>
 
-          <button id="timerDown" class="ph ph-minus-circle">
+          <button 
+          data-action="set"
+           class="ph ph-minus-circle">
             <span class="sr-only">Diminuir 5 minutos do timer</span>
           </button>
         </section>
       </div>
       <!-- cards -->
       <section id="sounds">
-        <button id="tree" class="ph ph-tree">
+        <button  
+        data-action="toggleRunning"
+        class="ph ph-tree">
           <span class="sr-only">Adicionar sons da natureza</span>
         </button>
 
-        <button id="rain" class="ph ph-cloud-rain">
+        <button  
+        data-action="toggleRunning"
+        class="ph ph-cloud-rain">
           <span class="sr-only">Adicionar sons de chuva</span>
         </button>
 
-        <button id="store" class="ph ph-keyboard">
+        <button  
+        data-action="toggleRunning"
+        class="ph ph-keyboard">
           <span class="sr-only">adicionar barulho de teclado</span>
         </button>
 
-        <button id="fire" class="ph ph-fire">
+        <button  
+        data-action="toggleRunning"
+        class="ph ph-fire">
           <span class="sr-only">adicionar barulho de lareira</span>
         </button>
       </section>
