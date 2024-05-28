@@ -1,6 +1,4 @@
-import { controls } from "./elements.js";
-import { stop } from "./elements.js"
-import { sounds } from "./elements.js";
+import { controls, stop, sounds } from "./elements.js";
 import * as actions from "./actions.js"
 
 
