@@ -108,13 +108,19 @@ body {
   border: none;
 }
 
+.running .ph-play-circle {
+  display: flex;
+  opacity: 0.5;
+}
+
 #sounds {
   display: grid;
   gap: 3.2rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
 
-  
+
+
   /* grid-area: sounds; */
 }
 
@@ -133,4 +139,8 @@ body {
 
 button {
   cursor: pointer;
+}
+
+.music-on #sounds button {
+ background-color: rgb(79, 85, 94);
 }
