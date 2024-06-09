@@ -1,4 +1,4 @@
 import './dark-mode.js'
 import * as FocusTimer from "./FocusTimer/index.js"
 
-FocusTimer.start(25, 0)
+FocusTimer.start(1, 0)

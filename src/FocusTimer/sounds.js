@@ -1,5 +1,6 @@
 //timer
 export const buttonPress = new Audio('./assets/button-press.wav')
+export const finishAudio = new Audio('./assets/kichen-timer.mp3')
 //cards
 export const forestAudio = new Audio('./assets/forest.mp3')
 export const rainAudio = new Audio('./assets/rain.mp3')
