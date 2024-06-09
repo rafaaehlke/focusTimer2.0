@@ -1,9 +1,11 @@
 import state from './state.js'
 import * as sounds from './sounds.js'
+import * as timer from './timer.js'
 
 export function toggleRunning() {
   state.isRunning = document.documentElement.classList.toggle('running')
   sounds.buttonPress.play()
+  timer.countDown()
 
 }
 
@@ -11,6 +13,7 @@ export function stop() {
   state.isRunning = false
   document.documentElement.classList.remove('running')
   sounds.buttonPress.play()
+
 }
 
 export function set() {

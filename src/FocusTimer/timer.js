@@ -9,3 +9,12 @@ export function updateDisplay(minutes, seconds) {
   el.minutes.textContent = String(minutes).padStart(2, "0")
   el.seconds.textContent = String(seconds).padStart(2, "0")
 }
+
+export function countDown() {
+  if(!state.isRunning) {
+    return
+    }
+    console.log('iniciou')
+    setTimeout(() => countDown(), 1000)
+    
+}
