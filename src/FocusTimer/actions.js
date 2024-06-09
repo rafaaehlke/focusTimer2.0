@@ -3,21 +3,26 @@ import * as sounds from './sounds.js'
 
 export function toggleRunning() {
   state.isRunning = document.documentElement.classList.toggle('running')
+  sounds.buttonPress.play()
+
 }
 
 export function stop() {
   state.isRunning = false
   document.documentElement.classList.remove('running')
+  sounds.buttonPress.play()
 }
 
 export function set() {
   console.log('Set teste')
+  sounds.buttonPress.play()
 }
 
 
 //Sounds add classList
 export function florestOn() {
   state.isMute = document.documentElement.classList.toggle('florestOn')
+  sounds.buttonPress,play()
   sounds.forestAudio.play()
 }
 
