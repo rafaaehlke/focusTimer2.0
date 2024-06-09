@@ -22,7 +22,6 @@ export function set() {
 //Sounds add classList
 export function florestOn() {
   state.isMute = document.documentElement.classList.toggle('florestOn')
-  sounds.buttonPress,play()
   sounds.forestAudio.play()
 }
 
