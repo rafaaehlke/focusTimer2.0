@@ -1,5 +1,5 @@
-
 import state from './state.js'
+import * as sounds from './sounds.js'
 
 export function toggleRunning() {
   state.isRunning = document.documentElement.classList.toggle('running')
@@ -18,16 +18,20 @@ export function set() {
 //Sounds add classList
 export function florestOn() {
   state.isMute = document.documentElement.classList.toggle('florestOn')
+  sounds.forestAudio.play()
 }
 
 export function rainOn() {
   state.isMute = document.documentElement.classList.toggle('rainOn')
+  sounds.rainAudio.play()
 }
 
 export function keyboardOn() {
   state.isMute = document.documentElement.classList.toggle('keyboardOn')
+  sounds.keyboarAudio.play()
 }
 
 export function fireOn() {
   state.isMute = document.documentElement.classList.toggle('fireOn')
+  sounds.fireAudio.play()
 }
