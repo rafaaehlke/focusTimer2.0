@@ -108,9 +108,9 @@ body {
   border: none;
 }
 
-.running .ph-play-circle {
-  display: flex;
-  opacity: 0.5;
+html.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
 }
 
 #sounds {
@@ -139,8 +139,4 @@ body {
 
 button {
   cursor: pointer;
-}
-
-.music-on #sounds button {
- background-color: rgb(79, 85, 94);
 }

@@ -1,6 +1,7 @@
 import state from './state.js'
 import * as el from './elements.js'
 import { finishAudio } from './sounds.js'
+import { reset } from './actions.js'
 
 export function updateDisplay(minutes, seconds) {
   minutes = minutes ?? state.minutes  //Nullish coalesing operator
@@ -29,14 +30,11 @@ export function countDown() {
 
     if( minutes < 0 ) {
       finishAudio.play()
+      reset()
       return
     }
 
 
     updateDisplay(minutes, seconds)
-
-
     setTimeout(() => countDown(), 1000)
-
-    
 }
