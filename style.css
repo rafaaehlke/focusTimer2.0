@@ -113,6 +113,11 @@ html:not(.running) .ph-pause-circle {
   display: none;
 }
 
+html.running .ph-timer,
+html:not(.running) .ph-stop-circle {
+  display: none;
+}
+
 #sounds {
   display: grid;
   gap: 3.2rem;

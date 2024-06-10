@@ -1,7 +1,9 @@
 //importado as funcoes do controles, stop e sounds do elements
-import { controls, stop, sounds } from "./elements.js";
+import * as el from "./elements.js";
 //importado tudo e renoameado com actions, de actions.js
 import * as actions from "./actions.js"
+import * as state from "./state.js";
+import { updateDisplay } from "./timer.js";
 
 //funçao criada para registro de eventos click no data action, e caso ele detecte que aonde clicado não é uma funcao, 
 //retornará e não executara nada
@@ -35,6 +37,26 @@ export function stopControl () {
 export function soundControls () {
   sounds.addEventListener('click', (event) => {
     eventos()
+  })
+}
+
+//Editando os minutos
+export function setMinutes() {
+  el.minutes.addEventListener('focus', () => {
+    el.minutes.textContent = ""
+  })
+
+  el.minutes.onkeypress = (event) => /\d/.test(event.key)
+
+  el.minutes.addEventListener('blur', (event) => {
+    let time = event.currentTarget.textContent
+    time = time > 60 ? 60 : time
+
+   state.minutes = time
+   state.seconds = 0
+    
+   updateDisplay()
+   el.minutes.removeAttribute('contenteditable')
   })
 }
 
