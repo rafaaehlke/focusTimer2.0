@@ -2,7 +2,7 @@
 import * as el from "./elements.js";
 //importado tudo e renoameado com actions, de actions.js
 import * as actions from "./actions.js"
-import * as state from "./state.js";
+import state from "./state.js";
 import { updateDisplay } from "./timer.js";
 
 //funçao criada para registro de eventos click no data action, e caso ele detecte que aonde clicado não é uma funcao, 
