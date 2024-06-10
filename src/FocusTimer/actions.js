@@ -43,21 +43,41 @@ export function set() {
 
 //Sounds add classList
 export function florestOn() {
-  state.isMute = document.documentElement.classList.toggle('florestOn')
-  sounds.forestAudio.play()
+  state.florestOn = document.documentElement.classList.toggle('florestOn')
+  if(state.florestOn) {
+    sounds.forestAudio.play()
+    return
+  }
+
+  sounds.forestAudio.pause()
 }
 
 export function rainOn() {
-  state.isMute = document.documentElement.classList.toggle('rainOn')
-  sounds.rainAudio.play()
+  state.rainOn = document.documentElement.classList.toggle('rainOn')
+  if(state.rainOn) {
+    sounds.rainAudio.play()
+    return
+  }
+
+  sounds.rainAudio.pause()
 }
 
 export function keyboardOn() {
-  state.isMute = document.documentElement.classList.toggle('keyboardOn')
-  sounds.keyboarAudio.play()
+  state.keyboardOn = document.documentElement.classList.toggle('keyboardOn')
+  if(state.keyboardOn) {
+    sounds.keyboarAudio.play()
+    return
+  }
+
+  sounds.keyboarAudio.pause()
 }
 
 export function fireOn() {
-  state.isMute = document.documentElement.classList.toggle('fireOn')
-  sounds.fireAudio.play()
+  state.fireOn = document.documentElement.classList.toggle('fireOn')
+  if(state.fireOn) {
+    sounds.fireAudio.play()
+    return
+  }
+
+  sounds.fireAudio.pause()
 }

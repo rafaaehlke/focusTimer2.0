@@ -4,4 +4,8 @@ export default {
   seconds: 0,
   isRunning: false,
   isMute: true,
+  florestOn: false,
+  rainOn: false,
+  keyboardOn: false,
+  fireOn: false,
 }
