@@ -35,8 +35,27 @@ export function setTimer() {
   sounds.buttonPress.play()
 }
 
-export function set() {
-  console.log('Set teste')
+//Adicionar 5minutos+
+export function setUp() {
+  let minutes = Number(el.minutes.textContent)
+  let seconds = Number(el.seconds.textContent)
+  if (minutes + 5 > 60) {
+    timer.updateDisplay(60, 0)
+    return
+  }
+  minutes = minutes + 5
+  timer.updateDisplay(minutes, seconds)
+  sounds.buttonPress.play()
+}
+//Remover 5minutos--
+export function setDown() {
+  let minutes = Number(el.minutes.textContent)
+  let seconds = Number(el.seconds.textContent)
+  if (minutes - 5 < 0) {
+    return
+  }
+  minutes = minutes - 5
+  timer.updateDisplay(minutes, seconds)
   sounds.buttonPress.play()
 }
 
