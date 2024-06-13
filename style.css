@@ -7,42 +7,46 @@
 :root {
   font-size: clamp(40%, 1% + 2vw, 62.5%);
 
-  --bg-linear: linear-gradient(
-    141deg,
-    rgba(92, 139, 208, 1) 0%,
-    rgba(5, 51, 139, 1) 100%
-  );
-  --bg-dark: linear-gradient(
-    141deg,
-    rgba(53, 64, 80, 1) 0%,
-    rgba(9, 30, 70, 1) 100%
-  );
+  --bg-linear: linear-gradient(141deg,
+      rgba(92, 139, 208, 1) 0%,
+      rgba(5, 51, 139, 1) 100%);
+  --bg-dark: linear-gradient(141deg,
+      rgba(53, 64, 80, 1) 0%,
+      rgba(9, 30, 70, 1) 100%);
+  /* cards background */
   --bg-card: rgb(208, 208, 209);
+  --bg-forest: hsl(80, 82%, 38%);
+  --bg-rain: hsl(236, 100%, 50%);
+  --bg-keyboard: hsl(180, 59%, 45%);
+  --bg-fire: hsla(0, 100%, 51%, 0.815);
+
 }
 
 /* darkMode */
 html.dark {
-  --bg-dark: linear-gradient(
-    141deg,
-    rgba(92, 139, 208, 1) 0%,
-    rgba(5, 51, 139, 1) 100%
-  );
-  --bg-linear: linear-gradient(
-    141deg,
-    rgba(53, 64, 80, 1) 0%,
-    rgba(9, 30, 70, 1) 100%
-  );
+  --bg-dark: linear-gradient(141deg,
+      rgba(92, 139, 208, 1) 0%,
+      rgba(5, 51, 139, 1) 100%);
+  --bg-linear: linear-gradient(141deg,
+      rgba(53, 64, 80, 1) 0%,
+      rgba(9, 30, 70, 1) 100%);
+
+  --bg-card: rgb(161, 161, 161);
+  --bg-forest: hsl(80, 81%, 17%);
+  --bg-rain: hsl(236, 96%, 32%);
+  --bg-keyboard: hsl(180, 60%, 33%);
+  --bg-fire: hsla(0, 95%, 38%, 0.815);
 }
 
 html.dark .ph-moon-stars,
-html:not(.dark) .ph-sun-dim  {
+html:not(.dark) .ph-sun-dim {
   display: none;
 }
 
 #dark-mode {
   position: absolute;
   right: 3.2rem;
-	top: 3.2rem;
+  top: 3.2rem;
   font-size: 4.2rem;
   line-height: 0;
 
@@ -62,11 +66,11 @@ html:not(.dark) .ph-sun-dim  {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
-  }
+}
 
 body {
   font-family: "Roboto", sans-serif;
- 
+
   display: grid;
   place-content: center;
   height: 100vh;
@@ -75,7 +79,7 @@ body {
   background: var(--bg-linear);
 }
 
-#app { 
+#app {
   max-width: 128rem;
   gap: 19.2rem;
   align-items: center;
@@ -89,7 +93,7 @@ body {
 #timer {
   display: flex;
   justify-content: center;
-  
+
   font-size: 12.6rem;
   /* grid-area: timer; */
 }
@@ -136,7 +140,7 @@ html:not(.running) .ph-stop-circle {
   font-size: 4.8rem;
   background-color: var(--bg-card);
   opacity: 0.7;
-  
+
   border: none;
   border-radius: 2.4rem;
 
@@ -144,4 +148,65 @@ html:not(.running) .ph-stop-circle {
 
 button {
   cursor: pointer;
+}
+
+/* Animaçoes */
+
+.florestOn #florest {
+  background-color: var(--bg-forest);
+  animation: rotate-vert-center 0.8s;
+  transform: scale(1.1);
+}
+
+.rainOn #rain {
+  background-color: var(--bg-rain);
+  animation: rotate-vert-center 0.8s;
+  transform: scale(1.1);
+}
+
+.keyboardOn #keyboard {
+  background-color: var(--bg-keyboard);
+  animation: rotate-vert-center 0.8s;
+  transform: scale(1.1);
+}
+
+.fireOn #fire {
+  background-color: var(--bg-fire);
+  animation: rotate-vert-center 0.8s;
+  transform: scale(1.1);
+}
+
+
+
+@keyframes rotate-vert-center {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes rotate-vert-center {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
 }
