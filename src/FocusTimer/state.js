@@ -8,4 +8,5 @@ export default {
   rainOn: false,
   keyboardOn: false,
   fireOn: false,
+  countdownId: null,
 }
